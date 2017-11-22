@@ -7,6 +7,7 @@
     "start": "ng serve -o",
     "server": "node ./node_data_server/app.js",
     "run_all": "npm run server & npm run start",
+    "install_packages": "npm install",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
