@@ -68,7 +68,6 @@ export class DataTableServerPagingComponent implements OnInit, AfterViewInit {
     processing: true,
     serverSide: true,
     ajax: 'http://localhost:9999/assets/site-application-details'
-    // ajax: 'http://localhost:9999/assets/server_processing'
   };
 
   constructor(private tableService: TableService) {

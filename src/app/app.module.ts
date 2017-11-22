@@ -8,6 +8,7 @@ import { DataTablePagingComponent } from './data-table-paging/data-table-paging.
 import { DataTableSrollComponent } from './data-table-sroll/data-table-sroll.component';
 import { TableService } from './commons/services/table.service';
 import { DataTableServerPagingComponent } from './data-table-server-paging/data-table-server-paging.component';
+import { DataTableServerScrollingComponent } from './data-table-server-scrolling/data-table-server-scrolling.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DataTableServerPagingComponent } from './data-table-server-paging/data-
     AppComponent,
     DataTablePagingComponent,
     DataTableSrollComponent,
-    DataTableServerPagingComponent
+    DataTableServerPagingComponent,
+    DataTableServerScrollingComponent
   ],
   imports: [
     BrowserModule,
