@@ -1,18 +1,28 @@
+import { TableRoutes } from './table.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { DataTablePagingComponent } from './data-table-paging/data-table-paging.component';
+import { DataTableSrollComponent } from './data-table-sroll/data-table-sroll.component';
+import { TableService } from './commons/services/table.service';
+import { DataTableServerPagingComponent } from './data-table-server-paging/data-table-server-paging.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DataTablePagingComponent,
+    DataTableSrollComponent,
+    DataTableServerPagingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    TableRoutes,
   ],
-  providers: [],
+  providers: [TableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
