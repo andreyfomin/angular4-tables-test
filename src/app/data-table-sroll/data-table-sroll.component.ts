@@ -16,7 +16,7 @@ export class DataTableSrollComponent implements OnInit, AfterViewInit {
   private tableOptions = {
     data: [],
     columns: [],
-    scrollY: '200px',
+    scrollY: 411,
     scrollCollapse: true,
     paging: false
   };

@@ -15,7 +15,8 @@ export class DataTablePagingComponent implements OnInit, AfterViewInit {
     data: [],
     columns: [],
     scrollCollapse: true,
-    paging: true
+    paging: true,
+    scrollY: 411,
   };
 
   constructor(private tableService: TableService) {

@@ -84,7 +84,7 @@ export class DataTableServerScrollingComponent implements OnInit, AfterViewInit 
     //   }, 50);
     // },
     ajax: 'http://localhost:9999/assets/site-application-details',
-    scrollY: 400,
+    scrollY: 411,
     scroller: {
       loadingIndicator: true
     }
