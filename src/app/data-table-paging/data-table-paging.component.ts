@@ -6,7 +6,9 @@ declare var $: any;
 
 @Component({
   selector: 'app-data-table-paging',
-  template: `<table id='pageTable' class="display" cellspacing="0" width="100%" #pageTable></table>`,
+  template: `
+  <table id='pageTable' class="display" cellspacing="0" width="100%" #pageTable>
+  </table>`,
   styleUrls: ['./data-table-paging.component.css']
 })
 export class DataTablePagingComponent implements OnInit, AfterViewInit {
@@ -16,7 +18,8 @@ export class DataTablePagingComponent implements OnInit, AfterViewInit {
     columns: [],
     scrollCollapse: true,
     paging: true,
-    scrollY: 411,
+    // scrollY: 411,
+    initComplete: null
   };
 
   constructor(private tableService: TableService) {
@@ -35,8 +38,11 @@ export class DataTablePagingComponent implements OnInit, AfterViewInit {
         this.tableOptions.data = res.dataSet;
         this.tableOptions.columns = res.columns;
 
+        this.tableOptions.initComplete = settings => $(`#${this.pageTable.nativeElement.id}`).colResizable({ liveDrag: true });
+
         $(`#${this.pageTable.nativeElement.id}`)
           .DataTable(this.tableOptions);
+
         console.log(this.pageTable);
       });
   }

@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o",
+    "start": "ng serve",
+    "start_with_browser": "ng serve -o",
+    "start_with_proxy": "ng serve -o --proxy-config proxy.conf.json",
     "server": "node ./node_data_server/app.js",
     "run_all": "npm run server & npm run start",
     "install_packages": "npm install",
@@ -25,6 +27,7 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "bootstrap": "^4.0.0-beta.2",
+    "colresizable": "^1.6.0",
     "core-js": "^2.4.1",
     "datatables.net": "^1.10.16",
     "datatables.net-bs4": "^1.10.16",
